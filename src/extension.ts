@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('vs-notes.execute', async () => {
+	let disposable = vscode.commands.registerCommand('vs-code-quick-notes.execute', async () => {
 		// The code you place here will be executed every time your command is executed
 
 		// Check if there is an active Note Editor.
@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
 		if (isActiveNoteEditor) {
 			focusOnNoteEditor();
 		} else {
-			vscode.window.showInformationMessage('VS-Notes is now active!');
+			vscode.window.showInformationMessage('VSCode Quick Notes is now active!');
 			// Get the notes from the extension's global state.
 			const notesContent = context.globalState.get<string>('vs_notes') || '';
 			// Set the document
@@ -58,7 +58,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// Show Message on Text Document close.
 	context.subscriptions.push(vscode.workspace.onDidCloseTextDocument((textDoc) => {
 		if (textDoc.languageId === 'markdown' && textDoc.getText().length) {
-			vscode.window.showInformationMessage("Content has been saved successfully in VS Code", { title: 'VS Notes' });
+			vscode.window.showInformationMessage("Content has been saved successfully in VS Code", { title: 'VSCode Quick Notes' });
 		}
 	}));
 

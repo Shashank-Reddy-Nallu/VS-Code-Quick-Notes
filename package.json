@@ -1,6 +1,6 @@
 {
-  "name": "vs-notes",
-  "displayName": "VS Notes",
+  "name": "vs-code-quick-notes",
+  "displayName": "VSCode Quick Notes",
   "version": "0.0.1",
   "description": "Effortlessly capture and store notes with our Visual Studio Code extension.",
   "publisher": "ShashankReddyNallu",
@@ -17,20 +17,20 @@
   "contributes": {
     "commands": [
       {
-        "command": "vs-notes.execute",
-        "title": "VS Notes"
+        "command": "vs-code-quick-notes.execute",
+        "title": "VSCode Quick Notes"
       }
     ],
     "keybindings": [
       {
-        "command": "vs-notes.execute",
+        "command": "vs-code-quick-notes.execute",
         "key": "alt+x"
       }
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shashank-Reddy-Nallu/VS-Notes.git"
+    "url": "https://github.com/Shashank-Reddy-Nallu/VS-Code-Quick-Notes.git"
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
